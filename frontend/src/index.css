@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 255 255 255;
+  --bg-subtle: 247 247 248;
+  --surface: 255 255 255;
+  --border: 238 238 240;
+  --text: 10 10 13;
+  --text-muted: 110 110 128;
+}
+
+.dark {
+  --bg: 10 10 13;
+  --bg-subtle: 21 21 26;
+  --surface: 27 27 33;
+  --border: 45 45 54;
+  --text: 247 247 248;
+  --text-muted: 148 148 163;
+}
+
+* {
+  border-color: rgb(var(--border));
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background-color: rgb(var(--bg-subtle));
+  color: rgb(var(--text));
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    rgb(var(--border)) 25%,
+    rgb(var(--bg-subtle)) 37%,
+    rgb(var(--border)) 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.6s infinite linear;
+}
+
+::selection {
+  background-color: rgb(52 102 255 / 0.2);
+}
